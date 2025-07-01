@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Icosahedron, MeshDistortMaterial, OrbitControls } from '@react-three/drei';
+import { Icosahedron, OrbitControls } from '@react-three/drei';
 
 function Scene() {
   const meshRef = useRef<THREE.Mesh>(null!);
@@ -18,18 +18,15 @@ function Scene() {
   return (
     <>
       <Icosahedron args={[2.2, 1]} ref={meshRef}>
-        <MeshDistortMaterial
-            color={'hsl(217, 89%, 61%)'}
-            attach="material"
-            distort={0.4}
-            speed={1.5}
+        <meshStandardMaterial
+            color={'hsl(180, 86%, 51%)'}
             roughness={0.2}
             metalness={0.7}
         />
       </Icosahedron>
       <ambientLight intensity={1.5} />
       <directionalLight position={[10, 5, 5]} intensity={1.2} />
-      <directionalLight position={[-10, -5, -5]} intensity={0.8} color={'hsl(180, 86%, 51%)'} />
+      <directionalLight position={[-10, -5, -5]} intensity={0.8} color={'hsl(217, 89%, 61%)'} />
     </>
   );
 }
