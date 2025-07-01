@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from 'react';
+import type * as THREE from 'three';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Icosahedron, OrbitControls } from '@react-three/drei';
 
