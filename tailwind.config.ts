@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Space Grotesk', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif'],
+        headline: ['Playfair Display', 'serif'],
         code: ['monospace'],
       },
       colors: {
@@ -40,6 +40,14 @@ export default {
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
+        },
+        gold: {
+          DEFAULT: 'hsl(var(--gold))',
+          light: 'hsl(var(--gold-light))',
+        },
+        platinum: {
+          DEFAULT: 'hsl(var(--platinum))',
+          dark: 'hsl(var(--platinum-dark))',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
@@ -99,6 +107,44 @@ export default {
         fadeIn: {
           'from': { opacity: '0', transform: 'translateY(20px)' },
           'to': { opacity: '1', transform: 'translateY(0)' },
+        },
+        pulse: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
+        },
+        glow: {
+          '0%, 100%': { 
+            opacity: '0.8',
+            boxShadow: '0 0 5px rgba(59, 130, 246, 0.5), 0 0 10px rgba(59, 130, 246, 0.3)' 
+          },
+          '50%': { 
+            opacity: '1',
+            boxShadow: '0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.5), 0 0 30px rgba(59, 130, 246, 0.3)' 
+          },
+        },
+        goldGlow: {
+          '0%, 100%': { 
+            opacity: '0.8',
+            boxShadow: '0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.3)' 
+          },
+          '50%': { 
+            opacity: '1',
+            boxShadow: '0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.5), 0 0 30px rgba(255, 215, 0, 0.3)' 
+          },
+        },
+        diamondSparkle: {
+          '0%, 20%, 40%, 60%, 80%, 100%': { 
+            opacity: '0.2',
+            transform: 'scale(1)'
+          },
+          '10%, 30%, 50%, 70%, 90%': { 
+            opacity: '1',
+            transform: 'scale(1.1)'
+          },
+        },
+        luxuryRotate: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         }
       },
       animation: {
@@ -106,7 +152,12 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         shimmer: 'shimmer 4s ease-in-out infinite',
         float: 'float 6s ease-in-out infinite',
-        'fade-in': 'fadeIn 1s ease-out forwards'
+        'fade-in': 'fadeIn 1s ease-out forwards',
+        pulse: 'pulse 4s ease-in-out infinite',
+        glow: 'glow 3s ease-in-out infinite',
+        'gold-glow': 'goldGlow 3s ease-in-out infinite',
+        'diamond-sparkle': 'diamondSparkle 4s ease-in-out infinite',
+        'luxury-rotate': 'luxuryRotate 20s linear infinite'
       },
     },
   },
