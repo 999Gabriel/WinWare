@@ -41,8 +41,13 @@ export function CaseStudiesSection() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          {projects.map((project) => (
-            <Link href="#" key={project.title} className="group relative block overflow-hidden rounded-lg border border-primary/20">
+          {projects.map((project, index) => (
+            <Link 
+              href="#" 
+              key={project.title} 
+              className="group relative block overflow-hidden rounded-lg border border-primary/20 opacity-0 animate-[fadeIn_1s_ease-in-out_forwards]"
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
               <Image
                 src={project.image}
                 alt={`Screenshot of ${project.title}`}

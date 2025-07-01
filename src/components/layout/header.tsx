@@ -19,7 +19,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 h-full w-16 md:w-20 bg-black/30 backdrop-blur-lg z-50 flex flex-col items-center justify-between py-6 border-r border-primary/10">
       <Link href="#home" aria-label="WinWare Apex Home">
-        <Logo className="h-8 w-8 md:h-10 md:w-10 text-primary hover:text-accent transition-colors duration-300" />
+        <Logo className="h-8 w-8 md:h-10 md:w-10 text-primary hover:text-accent transition-colors duration-300 hover:animate-pulse" />
       </Link>
       <nav>
         <ul className="flex flex-col items-center gap-6">
