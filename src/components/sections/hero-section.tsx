@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
 
 const Animated3dLogo = dynamic(
-  () => import('@/components/shared/animated-3d-logo').then((mod) => mod.Animated3dLogo),
+  () => import('@/components/shared/animated-3d-logo'),
   { 
     ssr: false,
     loading: () => (

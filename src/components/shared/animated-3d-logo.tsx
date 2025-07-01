@@ -35,7 +35,7 @@ function Scene() {
   );
 }
 
-export function Animated3dLogo() {
+function Animated3dLogo() {
   return (
     <div className="w-full h-full">
         <Canvas>
@@ -45,3 +45,5 @@ export function Animated3dLogo() {
     </div>
   );
 }
+
+export default Animated3dLogo;
