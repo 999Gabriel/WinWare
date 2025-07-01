@@ -1,24 +1,12 @@
 "use client";
 
-import { useRef } from 'react';
-import type * as THREE from 'three';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { Icosahedron, OrbitControls } from '@react-three/drei';
 
 function Scene() {
-  const meshRef = useRef<THREE.Mesh>(null!);
-
-  useFrame((state) => {
-    const { clock } = state;
-    if (meshRef.current) {
-      meshRef.current.rotation.y = clock.getElapsedTime() * 0.1;
-      meshRef.current.rotation.x = clock.getElapsedTime() * 0.05;
-    }
-  });
-
   return (
     <>
-      <Icosahedron args={[2.2, 1]} ref={meshRef}>
+      <Icosahedron args={[2.2, 1]}>
         <meshStandardMaterial
             color={'hsl(180, 86%, 51%)'}
             roughness={0.2}
@@ -37,7 +25,7 @@ function Animated3dLogo() {
     <div className="w-full h-full">
         <Canvas>
             <Scene />
-            <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.75} />
+            <OrbitControls enableZoom={false} enablePan={false} />
         </Canvas>
     </div>
   );
