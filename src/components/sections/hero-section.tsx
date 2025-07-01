@@ -3,32 +3,16 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
-import { Skeleton } from '@/components/ui/skeleton';
-import type { ComponentType } from 'react';
-import { useState, useEffect } from 'react';
-
-const LoadingSkeleton = () => (
-    <div className="w-full h-full flex items-center justify-center">
-      <Skeleton className="w-64 h-64 rounded-full" />
-    </div>
-);
+import { AnimatedLogo } from '@/components/logo';
 
 export function HeroSection() {
-  const [Animated3dLogo, setAnimated3dLogo] = useState<ComponentType | null>(null);
-
-  useEffect(() => {
-    import('@/components/shared/animated-3d-logo')
-      .then((mod) => setAnimated3dLogo(() => mod.default))
-      .catch((err) => console.error("Failed to load 3D logo", err));
-  }, []);
-
   return (
     <section id="home" className="min-h-screen flex flex-col items-center justify-center text-center p-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-primary/5 [mask-image:linear-gradient(to_bottom,white_5%,transparent_50%)]"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
       
-      <div className="z-10 animate-[fadeIn_1s_ease-in-out] w-full max-w-2xl h-96 md:h-[450px]">
-        {Animated3dLogo ? <Animated3dLogo /> : <LoadingSkeleton />}
+      <div className="z-10 animate-[fadeIn_1s_ease-in-out] w-full max-w-2xl h-96 md:h-[450px] flex items-center justify-center">
+        <AnimatedLogo />
       </div>
       
       <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl mt-4 tracking-tighter animate-[fadeIn_1.2s_ease-in-out_forwards] opacity-0">
