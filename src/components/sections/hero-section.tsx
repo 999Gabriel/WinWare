@@ -3,17 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import { Skeleton } from '@/components/ui/skeleton';
-
-const Animated3dLogo = dynamic(() => import('@/components/shared/animated-3d-logo'), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-full flex items-center justify-center">
-      <Skeleton className="w-64 h-64 rounded-full" />
-    </div>
-  ),
-});
+import { ClientOnly3dLogo } from '@/components/shared/client-only-3d-logo';
 
 
 export function HeroSection() {
@@ -23,7 +13,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
       
       <div className="z-10 animate-[fadeIn_1s_ease-in-out] w-full max-w-2xl h-96 md:h-[450px]">
-        <Animated3dLogo />
+        <ClientOnly3dLogo />
       </div>
       
       <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl mt-4 tracking-tighter animate-[fadeIn_1.2s_ease-in-out_forwards] opacity-0">
