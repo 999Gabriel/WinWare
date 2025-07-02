@@ -20,32 +20,32 @@ interface ProcessStep {
 const processSteps: ProcessStep[] = [
   {
     title: "Discovery",
-    description: "We begin by deeply understanding your business goals, target users, and project requirements through collaborative workshops and research.",
+    description: "We align on your goals, users, and requirements.",
     icon: Lightbulb
   },
   {
     title: "Planning & Design",
-    description: "Our team creates detailed specifications, architecture plans, and interactive prototypes to visualize the solution before development begins.",
+    description: "Clear specs, architecture plans, prototypes.",
     icon: FileSearch
   },
   {
     title: "Development",
-    description: "Using agile methodologies, we build your solution in iterative cycles, providing regular demos and incorporating feedback throughout.",
+    description: "Agile builds with regular demos and feedback cycles.",
     icon: Code2
   },
   {
     title: "Testing & QA",
-    description: "Rigorous quality assurance processes ensure your software is robust, secure, and performs optimally across all intended platforms.",
+    description: "Robust, secure, optimized software — every time.",
     icon: TestTube
   },
   {
     title: "Deployment",
-    description: "We handle the seamless launch of your solution, ensuring proper configuration, monitoring, and knowledge transfer to your team.",
+    description: "Seamless launch, full configuration, knowledge transfer.",
     icon: Rocket
   },
   {
     title: "Maintenance & Evolution",
-    description: "Our relationship continues with ongoing support, performance optimization, and strategic enhancements to keep your software competitive.",
+    description: "Continuous support, performance tuning, feature growth.",
     icon: Repeat2
   }
 ];
@@ -63,7 +63,7 @@ export function ProcessSection() {
         >
           <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-              Our Development Process
+              Our Process
             </span>
           </h2>
           <p className="mt-4 text-lg text-foreground/70 max-w-3xl mx-auto">

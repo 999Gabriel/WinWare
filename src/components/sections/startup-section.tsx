@@ -19,7 +19,7 @@ export function StartupSection() {
         >
           <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">
-              Startup Participation Model
+              Startup Partnership Model
             </span>
           </h2>
         </motion.div>
@@ -32,9 +32,9 @@ export function StartupSection() {
             viewport={{ once: true }}
             className="bg-card/30 backdrop-blur-sm p-6 rounded-lg border border-primary/10 hover:border-primary/30 transition-all duration-300"
           >
-            <h3 className="font-headline text-xl text-primary mb-4">Strategic Partnership</h3>
+            <h3 className="font-headline text-xl text-primary mb-4">Aligned for Growth</h3>
             <p className="text-foreground/70">
-              We believe in the power of innovation. That's why we've developed a unique equity-based collaboration model for promising startups with disruptive ideas.
+              We partner with startups through a flexible, equity-based model. You get premium development, we share in your success.
             </p>
           </motion.div>
 
@@ -47,7 +47,7 @@ export function StartupSection() {
           >
             <h3 className="font-headline text-xl text-primary mb-4">SAFE Agreements</h3>
             <p className="text-foreground/70">
-              Our Simple Agreement for Future Equity (SAFE) structure allows us to provide premium development services in exchange for the opportunity to grow alongside you.
+              Simple Agreements for Future Equity ensure a clear, founder-friendly collaboration structure.
             </p>
           </motion.div>
 
@@ -58,9 +58,9 @@ export function StartupSection() {
             viewport={{ once: true }}
             className="bg-card/30 backdrop-blur-sm p-6 rounded-lg border border-primary/10 hover:border-primary/30 transition-all duration-300"
           >
-            <h3 className="font-headline text-xl text-primary mb-4">Mutual Success</h3>
+            <h3 className="font-headline text-xl text-primary mb-4">Shared Incentives</h3>
             <p className="text-foreground/70">
-              This isn't just about code—it's about creating a partnership where our incentives are perfectly aligned with your growth trajectory.
+              Your growth is our growth. It's not just code — it's a strategic partnership.
             </p>
           </motion.div>
         </div>

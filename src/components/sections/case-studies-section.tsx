@@ -7,22 +7,22 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: 'FinTech Revolution',
-    category: 'Concept Project',
-    description: 'A comprehensive trading platform that redefined market analytics with AI-driven insights.',
-    image: 'https://placehold.co/600x400/2a2a2a/808080?text=FinTech+Revolution',
+    title: 'Cervelingua',
+    category: 'AI-Powered Education',
+    description: 'Spanish learning platform with AI features and interactive learning using camera integration, minigames, and personalized feedback.',
+    image: '/img/cervelingua_new.png',
   },
   {
-    title: 'MedTech Innovation',
-    category: 'Concept Project',
-    description: 'Patient monitoring system that leverages IoT and machine learning to predict health events.',
-    image: 'https://placehold.co/600x400/2a2a2a/808080?text=MedTech+Innovation',
+    title: 'Arduino Weather Station',
+    category: 'Embedded Systems',
+    description: 'Weather monitoring system built with Arduino featuring a seven-segment display, OLED display, DTH22 sensor, button interface, and Adafruit Neopixel OLED strip.',
+    image: '/img/arduino_project.png',
   },
   {
-    title: 'Sustainable Tech',
-    category: 'Concept Project',
-    description: 'Carbon footprint tracking platform for enterprises with blockchain verification.',
-    image: 'https://placehold.co/600x400/2a2a2a/808080?text=Sustainable+Tech',
+    title: 'JavaFX Workspace Manager',
+    category: 'Desktop Application',
+    description: 'File management utility developed in JavaFX that enables renaming files, copying them to other directories, and performing various workspace organization tasks.',
+    image: '/img/workspace.png',
   },
 ];
 
@@ -44,7 +44,7 @@ export function CaseStudiesSection() {
       y: 0,
       transition: { 
         duration: 0.8,
-        ease: "easeOut"
+        ease: [0.42, 0, 0.58, 1] // cubic-bezier equivalent for 'easeOut'
       }
     }
   };

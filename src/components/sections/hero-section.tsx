@@ -24,7 +24,7 @@ export function HeroSection() {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="font-headline text-4xl md:text-6xl lg:text-7xl mt-4 tracking-tighter"
       >
-        <span className="text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary to-accent">WINWARE</span>
+        <span className="text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary to-accent">WINWARE SOFTWARE SOLUTIONS</span>
       </motion.h1>
 
       <motion.p 
@@ -33,7 +33,7 @@ export function HeroSection() {
         transition={{ duration: 0.8, delay: 0.8 }}
         className="mt-6 max-w-2xl text-lg md:text-xl text-foreground/70"
       >
-        TAILORED SOFTWARE. TIMELESS IMPACT.
+        Build reliable, elegant software that drives real business value.
       </motion.p>
 
       <motion.div 

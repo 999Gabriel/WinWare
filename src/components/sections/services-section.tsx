@@ -34,23 +34,23 @@ interface EquityModel {
 const services: Service[] = [
   {
     title: 'Custom Software Development',
-    description: 'Bespoke solutions tailored to your unique business challenges. We transform complex requirements into elegant, powerful software.',
+    description: 'Bespoke software tailored to your business. From complex platforms to lean MVPs — reliable, scalable, clean.',
     icon: CodeXml,
   },
   {
     title: 'Scalable Development Teams',
-    description: 'Elite engineering talent that seamlessly integrates with your organization. Scale your capabilities without compromising on quality.',
+    description: 'Top-tier engineers ready to integrate with your existing structure. Scale your tech capacity without compromise.',
     icon: Users,
   },
   {
-    title: 'Startup Partnership Models',
-    description: 'Strategic collaboration with emerging innovators. We offer equity-based partnerships that align our success with yours.',
+    title: 'Startup Partnership Model',
+    description: 'We collaborate with innovative startups. Our equity-based model means we grow alongside you — aligned for success.',
     icon: Rocket,
     premium: true,
   },
   {
     title: 'Enterprise Solutions',
-    description: 'Comprehensive digital transformation for established organizations. Our enterprise-grade solutions drive efficiency and innovation.',
+    description: 'Comprehensive digital systems for established companies. We drive efficiency, performance, and innovation.',
     icon: Diamond,
     premium: true,
   },
@@ -59,42 +59,37 @@ const services: Service[] = [
 const pricingTiers: PricingTier[] = [
   {
     name: "Standard",
-    description: "Fixed-price project model with clear deliverables and timelines.",
-    price: "Custom Quote",
+    description: "Fixed-price project delivery with clear milestones.",
+    price: "Custom quote",
     features: [
-      "Detailed project scoping",
-      "Fixed deliverables",
+      "Detailed project scope",
       "Regular progress updates",
-      "30-day support after launch",
-      "Standard SLA"
+      "30 days post-launch support"
     ],
     icon: Check
   },
   {
     name: "Premium",
-    description: "Enhanced engagement with dedicated resources and priority support.",
-    price: "Custom Quote",
+    description: "Enhanced support with dedicated resources.",
+    price: "Custom quote",
     features: [
       "Everything in Standard",
       "Dedicated project manager",
-      "Priority support channels",
-      "90-day support after launch",
-      "Enhanced SLA with 24/7 critical support"
+      "Priority support",
+      "90 days post-launch support"
     ],
     highlighted: true,
     icon: Star
   },
   {
     name: "Enterprise",
-    description: "Comprehensive partnership with strategic consulting and white-glove service.",
-    price: "Custom Quote",
+    description: "Strategic consulting & long-term partnership.",
+    price: "Custom quote",
     features: [
       "Everything in Premium",
-      "Strategic technology consulting",
       "Dedicated development team",
-      "1-year extended support",
-      "Custom SLA with guaranteed response times",
-      "Quarterly strategy sessions"
+      "Ongoing strategic tech advisory",
+      "1 year extended support"
     ],
     icon: Crown
   }
@@ -184,7 +179,7 @@ export function ServicesSection() {
             className="absolute -bottom-10 -right-10 w-40 h-40 bg-platinum/5 rounded-full blur-3xl"
           />
 
-          <SectionTitle title="Premium Services" />
+          <SectionTitle title="Our Services" />
         </div>
 
         <motion.div
@@ -277,7 +272,7 @@ export function ServicesSection() {
               Engagement Models
             </h3>
             <p className="mt-4 text-lg text-foreground/70 max-w-3xl mx-auto">
-              Flexible partnership options designed to meet your specific needs and objectives
+              Flexible partnership options designed to meet your specific needs
             </p>
           </motion.div>
 

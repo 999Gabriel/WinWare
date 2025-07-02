@@ -13,19 +13,19 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "Working with this team transformed our digital infrastructure. Their technical expertise and commitment to quality delivered results beyond our expectations.",
+    quote: "WinWare transformed our technical foundation. Their clean approach delivered real results.",
     author: "Alex Johnson",
     position: "CTO",
     company: "TechVision Inc."
   },
   {
-    quote: "The attention to detail and problem-solving capabilities were exceptional. They didn't just write code; they provided strategic insights that improved our entire product.",
+    quote: "Exceptional problem-solving and clear communication — beyond coding, real product impact.",
     author: "Sarah Chen",
     position: "Product Director",
     company: "InnovateSoft"
   },
   {
-    quote: "From concept to deployment, the process was seamless. Their ability to translate complex requirements into elegant solutions made all the difference for our startup.",
+    quote: "They turned complex challenges into clean, scalable software. Seamless execution.",
     author: "Michael Rodriguez",
     position: "Founder",
     company: "LaunchPad Solutions"

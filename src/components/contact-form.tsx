@@ -33,6 +33,8 @@ export function ContactForm() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
+    // In a production environment, this would send an email to 999gabriel.winkler@gmail.com
+    // For now, we're just logging the values and showing a toast notification
     toast({
       title: "Message Sent!",
       description: "Thank you for reaching out. We will get back to you shortly.",

@@ -33,7 +33,7 @@ export function AboutSection() {
           >
             <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-foreground">
-              Our Vision
+              Discover WinWare
             </span>
             </h2>
           </motion.div>
@@ -47,10 +47,10 @@ export function AboutSection() {
                 className="prose prose-invert max-w-none"
             >
               <p className="text-lg leading-relaxed text-foreground/80">
-                At WinWare, we blend timeless principles of excellence with cutting-edge innovation. Our approach to software development transcends the ordinary, creating solutions that stand the test of time.
+                At WinWare, we combine technical precision with modern, scalable software solutions. Our approach is clear: Build reliable, elegant software that drives real business value.
               </p>
               <p className="text-lg leading-relaxed text-foreground/80">
-                Founded on the belief that software should be both powerful and elegant, we've assembled a team of visionaries who understand that true luxury lies in the details—the clean code, the intuitive interface, the seamless performance.
+                We believe exceptional software is built on clean code, intuitive interfaces, and seamless performance. Our team focuses on details that matter — from architecture to user experience.
               </p>
             </motion.div>
 
@@ -62,10 +62,7 @@ export function AboutSection() {
                 className="prose prose-invert max-w-none"
             >
               <p className="text-lg leading-relaxed text-foreground/80">
-                We don't just build software; we craft digital experiences that elevate your business to new heights. Each line of code is written with purpose, each design element carefully considered.
-              </p>
-              <p className="text-lg leading-relaxed text-foreground/80">
-                Our clients aren't just partners—they're visionaries who understand that exceptional software is an investment in their future. Together, we create solutions that define industries.
+                We don't just develop software. We create future-proof solutions that help your business grow.
               </p>
             </motion.div>
           </div>

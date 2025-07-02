@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 
 export default function CEOPage() {
@@ -51,10 +52,13 @@ export default function CEOPage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="md:col-span-1"
               >
-                <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg overflow-hidden relative">
-                  <div className="absolute inset-0 flex items-center justify-center text-primary/50 text-lg font-medium">
-                    CEO Portrait
-                  </div>
+                <div className="aspect-square rounded-lg overflow-hidden relative">
+                  <Image
+                    src="/img/ceo_gab.JPG"
+                    alt="CEO Portrait"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </motion.div>
 
@@ -66,7 +70,7 @@ export default function CEOPage() {
               >
                 <h2 className="font-headline text-2xl font-bold text-primary mb-4">Leadership Philosophy</h2>
                 <p className="text-lg leading-relaxed">
-                  As the founder and CEO of WINWARE, I believe that exceptional software is built at the intersection of technical excellence and human-centered design. My journey in technology began over two decades ago, driven by a passion for creating solutions that not only solve complex problems but do so with elegance and precision.
+                  As the 18-year-old founder and CEO of WINWARE based in Innsbruck, Austria, I believe that exceptional software is built at the intersection of technical excellence and human-centered design. I've always dreamed of running my own business to achieve the lifestyle I've imagined, and WINWARE is the realization of that dream.
                 </p>
                 <p className="text-lg leading-relaxed">
                   I've assembled a team of visionaries who share my commitment to crafting digital experiences that stand the test of time. Together, we've developed a unique approach that combines cutting-edge innovation with timeless principles of quality and reliability.
@@ -98,12 +102,12 @@ export default function CEOPage() {
               transition={{ duration: 0.8, delay: 1 }}
               className="text-center"
             >
-              <Link 
-                href="#contact" 
+              <a 
+                href="mailto:999gabriel.winkler@gmail.com" 
                 className="inline-flex items-center text-primary hover:text-accent transition-colors duration-300"
               >
                 Connect with me directly
-              </Link>
+              </a>
             </motion.div>
           </div>
         </main>

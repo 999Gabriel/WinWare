@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
-import { Code, Database, Server, Globe, Cloud, Lock } from 'lucide-react';
+import { Code, Database, Server, Globe, Cloud, Lock, Terminal, Cpu, Brain } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 interface TechnologyCategory {
@@ -12,6 +12,11 @@ interface TechnologyCategory {
 }
 
 const technologyCategories: TechnologyCategory[] = [
+  {
+    title: "Programming Languages",
+    icon: Terminal,
+    technologies: ["Java", "Python", "C++", "TypeScript", "JavaScript", "Swift", "SQL"]
+  },
   {
     title: "Frontend Development",
     icon: Code,
@@ -26,6 +31,16 @@ const technologyCategories: TechnologyCategory[] = [
     title: "Database Technologies",
     icon: Database,
     technologies: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Elasticsearch", "Firebase"]
+  },
+  {
+    title: "Embedded Systems",
+    icon: Cpu,
+    technologies: ["Arduino IDE", "Raspberry Pi", "Sensors Integration", "IoT Devices", "Adafruit Neopixel", "Seven-Segment Displays"]
+  },
+  {
+    title: "AI & Machine Learning",
+    icon: Brain,
+    technologies: ["LLM Integration", "Ollama", "Computer Vision", "Natural Language Processing", "AI-Powered Applications", "Interactive Learning"]
   },
   {
     title: "Cloud Services",
@@ -83,7 +98,7 @@ export function TechnologiesSection() {
             </span>
           </h2>
           <p className="mt-4 text-lg text-foreground/70 max-w-3xl mx-auto">
-            Our team leverages cutting-edge technologies to deliver robust, scalable, and future-proof solutions.
+            Our expertise spans across modern technologies to deliver robust, scalable solutions.
           </p>
         </motion.div>
 

@@ -17,7 +17,7 @@ export function ContactSection() {
         >
           <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-              Connect With Us
+              Contact WinWare
             </span>
           </h2>
           <motion.p 
@@ -27,7 +27,7 @@ export function ContactSection() {
             viewport={{ once: true }}
             className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto"
           >
-            Ready to elevate your digital presence? Our team of experts is prepared to transform your vision into reality.
+            Ready to turn your vision into scalable software? Let's build.
           </motion.p>
         </motion.div>
 
@@ -48,7 +48,7 @@ export function ContactSection() {
           className="text-center mt-16"
         >
           <p className="text-lg text-foreground/70 italic">
-            Excellence awaits. Let's create something extraordinary together that sets new standards in your industry.
+            Excellence starts here. Let's create software that performs and grows with your business.
           </p>
         </motion.div>
       </div>

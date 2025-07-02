@@ -9,12 +9,12 @@ import { motion } from 'framer-motion';
 
 const navItems = [
   { name: 'HOME', href: '/', icon: Home },
-  { name: 'ABOUT', href: '/about', icon: Info },
-  { name: 'SERVICES', href: '/services', icon: Briefcase },
-  { name: 'STARTUP', href: '/startup', icon: Rocket },
-  { name: 'CASES', href: '/cases', icon: FolderKanban },
+  { name: 'ABOUT', href: '/#about', icon: Info },
+  { name: 'SERVICES', href: '/#services', icon: Briefcase },
+  { name: 'STARTUP', href: '/#partnership', icon: Rocket },
+  { name: 'CASES', href: '/#projects', icon: FolderKanban },
   { name: 'CEO', href: '/ceo', icon: User },
-  { name: 'CONTACT', href: '/contact', icon: Mail },
+  { name: 'CONTACT', href: '/#contact', icon: Mail },
 ];
 
 export function Header() {
