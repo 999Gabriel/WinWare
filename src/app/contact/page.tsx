@@ -11,12 +11,12 @@ export default function ContactPage() {
   const contactInfo = [
     {
       title: 'Email',
-      details: 'info@winware.com',
+      details: '999gabriel.winkler@gmail.com',
       icon: Mail
     },
     {
       title: 'Location',
-      details: 'San Francisco, CA',
+      details: 'Innsbruck, Austria',
       icon: MapPin
     },
     {
@@ -76,7 +76,17 @@ export default function ContactPage() {
                     <info.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-headline text-xl font-bold text-primary mb-2">{info.title}</h3>
-                  <p className="text-foreground/70">{info.details}</p>
+                  {info.title === 'Email' ? (
+                    <a href={`mailto:${info.details}`} className="text-foreground/70 hover:text-primary transition-colors">
+                      {info.details}
+                    </a>
+                  ) : info.title === 'Phone' ? (
+                    <a href={`tel:${info.details.replace(/\D/g, '')}`} className="text-foreground/70 hover:text-primary transition-colors">
+                      {info.details}
+                    </a>
+                  ) : (
+                    <p className="text-foreground/70">{info.details}</p>
+                  )}
                 </motion.div>
               ))}
             </div>

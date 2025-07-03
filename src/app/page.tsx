@@ -9,7 +9,6 @@ import { StartupSection } from '@/components/sections/startup-section';
 import { CaseStudiesSection } from '@/components/sections/case-studies-section';
 import { TestimonialsSection } from '@/components/sections/testimonials-section';
 import { ContactSection } from '@/components/sections/contact-section';
-
 export default function Home() {
   return (
     <div className="bg-black text-foreground">

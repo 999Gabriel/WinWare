@@ -8,8 +8,19 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { ArrowRight, Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+// Define EmailJS types
+declare global {
+  interface Window {
+    emailjs: {
+      init: (publicKey: string) => void;
+      send: (serviceId: string, templateId: string, templateParams: any, publicKey: string) => Promise<any>;
+    };
+  }
+}
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -20,6 +31,13 @@ const formSchema = z.object({
 
 export function ContactForm() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // No need to load EmailJS anymore as we're using a simpler approach
+  useEffect(() => {
+    // This effect is kept for potential future enhancements
+    // but doesn't do anything now
+  }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -31,15 +49,95 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    // In a production environment, this would send an email to 999gabriel.winkler@gmail.com
-    // For now, we're just logging the values and showing a toast notification
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. We will get back to you shortly.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    // Set loading state
+    setIsSubmitting(true);
+
+    try {
+      console.log('Submitting form to API endpoint:', values);
+
+      // Use our API endpoint to process the message
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      // Parse the response
+      const responseData = await response.json();
+      console.log('API response:', responseData);
+
+      if (!response.ok) {
+        throw new Error(responseData.message || 'Failed to process message');
+      }
+
+      // If the API indicates we should use mailto, do that
+      if (responseData.useMailto) {
+        openMailtoLink(values);
+        return; // Exit early since we've opened the email client
+      }
+
+      // Show success notification
+      toast({
+        title: "Message Received!",
+        description: "Your message has been sent to Gabriel. Thank you for reaching out!",
+      });
+
+      // Reset form after successful submission
+      form.reset();
+    } catch (error) {
+      console.error('Error processing message:', error);
+
+      // Show error notification
+      toast({
+        title: "Error Processing Message",
+        description: "We're having trouble processing your message. We'll open your email client instead.",
+        variant: "destructive",
+      });
+
+      // Use mailto as a fallback
+      openMailtoLink(values);
+    } finally {
+      // Reset loading state
+      setIsSubmitting(false);
+    }
+  }
+
+  // Helper function to open mailto link
+  function openMailtoLink(values: z.infer<typeof formSchema>) {
+    try {
+      // Create mailto link with form data
+      const subject = encodeURIComponent(values.subject);
+      const body = encodeURIComponent(
+        `Name: ${values.name}\nEmail: ${values.email}\n\n${values.message}`
+      );
+      const mailtoLink = `mailto:999gabriel.winkler@gmail.com?subject=${subject}&body=${body}`;
+
+      // Open email client with pre-filled data
+      window.open(mailtoLink, '_blank');
+
+      toast({
+        title: "Email Client Opened",
+        description: "We've opened your email client with your message. Please send it to complete.",
+      });
+
+      // Reset form after opening email client
+      form.reset();
+    } catch (mailtoError) {
+      console.error('Mailto error:', mailtoError);
+
+      // If opening in a new tab fails, try the direct approach
+      const subject = encodeURIComponent(values.subject);
+      const body = encodeURIComponent(
+        `Name: ${values.name}\nEmail: ${values.email}\n\n${values.message}`
+      );
+      window.location.href = `mailto:999gabriel.winkler@gmail.com?subject=${subject}&body=${body}`;
+
+      // Reset form
+      form.reset();
+    }
   }
 
   const inputVariants = {
@@ -134,9 +232,18 @@ export function ContactForm() {
           <Button 
             type="submit" 
             size="lg" 
+            disabled={isSubmitting}
             className="bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground group transition-all duration-300 shadow-lg hover:shadow-accent/40 transform hover:scale-105"
           >
-            Send Message <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            {isSubmitting ? (
+              <>
+                Sending... <Loader2 className="ml-2 h-5 w-5 animate-spin" />
+              </>
+            ) : (
+              <>
+                Send Message <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </>
+            )}
           </Button>
         </div>
       </form>

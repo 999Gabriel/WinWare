@@ -14,12 +14,11 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
         strokeLinejoin="round"
         {...props}
       >
-        <title>WinWare Apex Logo</title>
-        <path d="M2 3h20" />
-        <path d="M4 3v18" />
-        <path d="M7.5 21S10 17 12 17s4.5 4 4.5 4" />
-        <path d="M12 3v14" />
-        <path d="M20 3v18" />
+        <title>WinWare Overlapping W's Logo</title>
+        {/* First W */}
+        <path d="M4 6l3 12l3-8l3 8l3-12" strokeOpacity="0.8" />
+        {/* Second W slightly offset */}
+        <path d="M2 8l3 12l3-8l3 8l3-12" strokeOpacity="1" />
       </svg>
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-full">
         <div className="absolute top-0 left-0 w-8 h-16 bg-white/20 -skew-x-12 transform -translate-x-12 group-hover:translate-x-32 transition-transform duration-1000" style={{ filter: 'blur(10px)' }}></div>
