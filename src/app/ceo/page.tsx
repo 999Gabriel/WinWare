@@ -106,7 +106,8 @@ export default function CEOPage() {
                 href="mailto:999gabriel.winkler@gmail.com" 
                 className="inline-flex items-center text-primary hover:text-accent transition-colors duration-300"
               >
-                Connect with me directly
+                Connect with me directly ➡️
+                @999gabriel.winkler@gmail.com
               </a>
             </motion.div>
           </div>
